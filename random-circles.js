@@ -1,15 +1,14 @@
 function setup() { 
   createCanvas(400, 400);
-	 background(220);
+ background(220);
+  colorMode(HSB);
 
 } 
 
 function draw() { 
 var h = 0;
 while(true) {
-  background(255);
-  colorMode(HSB);
-  fill(h, 100, 100);
+fill(h, 100, 100);
   ellipse(width/2, height/2, 100, 100);
   h = h + 5;
   
