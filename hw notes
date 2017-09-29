@@ -1,0 +1,12 @@
+function setup() { 
+  createCanvas(400, 400);
+	 frameRate(1);
+} 
+
+function draw() {
+  background(244, 248, 252);
+  ellipse(mouseX, mouseY, 50, 50);
+  print(pmouseX + " -> " + mouseX);
+}
+
+
