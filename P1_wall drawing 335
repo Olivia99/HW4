@@ -1,33 +1,50 @@
+
 background(0);
 stroke(255);
 
-// var x=0
-// while(x<width){
-//   line(x,0,x,height);
-//   x=x+10;
-// }
-// fill(0);
-// var x1=50,
-//     x2=150
-//     y1=width/2-50;
-// 		y2=width/2-50
-// rect(50,width/2-50,100,100);
-// while(y1<width/2+50){
-// line(x1,y1,x2,y2);
-// y1=y1+10;
-// y2=y2+10;
-// }
+var x=0
+while(x<width){
+  line(x,0,x,height);
+  x=x+10;
+}
+fill(0);
+var x1=50,
+    x2=150
+    y1=width/2-50;
+		y2=width/2-50
+rect(50,width/2-50,100,100);
+while(y1<width/2+50){
+line(x1,y1,x2,y2);
+y1=y1+10;
+y2=y2+10;
+}
 ellipse(250,width/2,100,100);
 var x3=200;
 var x4=300;
 var y3=width/2;
 var y4=width/2;
 
-while(y3<width/2+50){
-  line(x3,y3,x4,y4);
-  x3=x3+5;
-  x4=x4-5;
-  y3=y3-10;
-  y4=y4-10;
+var d= 0;
+var r= 50;
+
+
+stroke(255);
+angleMode(DEGREES);
+
+while(d>-90){
+  var ax=r*cos(d);
+var ay=r*sin(d);
+var bx=r*cos(180-d);
+var by=r*sin(180-d);
+  line(ax+250,ay+width/2,bx+250,by+width/2);
+  d=d-10
 }
-  
+var d=0
+while(d<90){
+var ax=r*cos(d);
+var ay=r*sin(d);
+var bx=r*cos(180-d);
+var by=r*sin(180-d);
+     line(ax+250,ay+width/2,bx+250,by+width/2);
+  d=d+10
+}
